@@ -1,1 +1,1 @@
-java -jar /myproject-0.0.1-SNAPSHOT.jar dddf
+java -jar /myproject-0.0.1-SNAPSHOT.jar dddf sdsdsd
