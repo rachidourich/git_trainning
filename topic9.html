@@ -1,0 +1,90 @@
+<!--File created from: ../shared/ViewersArchitecture4.dita on 2011-10-11 (yyyy-mm-dd)
+                id of root element for this file: aurora_topic_D61E12605137492FB36AA2163869B213-->
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"/><link rel="stylesheet" type="text/css" href="documentation.css"/><title>How the viewers work with your reporting
+		application</title></head><body><div class="body">
+<div ID=Popup style="POSITION: absolute; Z-INDEX: 1"></div><script language="JavaScript" src="popup.js"></script><layer name="PopupLayer" visibility="hide" STYLE="position:absolute" z-index=1></layer>
+<a name="aurora_topic_D61E12605137492FB36AA2163869B213_10"/><h2>How the viewers work with your reporting
+		application</h2><a name="aurora_id_2006123150256d155e1_9idx14"/><a name="aurora_id_2006123150256d155e1_9idx17"/><div class="body"><div class="p">Before looking at any particular SAP Crystal
+		  Reports product or architecture, it is useful to view an abstract reporting
+		  model to identify several logical components of a reporting application. 
+		</div><span><a name="image_30F1CAB8F05B4CAFB03ADCBBCE92F4FB_9"/><img src="images/Abstract_Model.gif" class="image" height="468px" width="760px" alt="Abstract reporting model"/></span><div class="p">The report viewer renders a report source into
+			 DHTML and provides interaction controls, such as Search, Zoom, Drill Down,
+			 Export, and Print. 
+		  </div><div class="section"><a name="section_BE93F6CEBEA5426D8FE7DC0F54604646_9"/><div class="section_title">Report sources </div><div class="p">A report source is an object used by the viewer
+				to access the properties of a report. It provides the viewer with the means to
+				query for report data, page information, and other internal report information.
+				Report sources are obtained from report servers such as the Crystal Reports
+				2011 Processing Server and the Crystal Reports 2011 Report Application Server. 
+			 </div></div><div class="section"><a name="section_D5889ECDC9954CAEB89DCB80EDCEB152_9"/><div class="section_title">Choosing a report server</div><div class="p">Although some applications that you develop may
+				work equally well using the Crystal Reports 2011 Processing Server or the
+				Crystal Reports 2011 Report Application Server, there are likely to be
+				situations when the requirements of a particular application mean that you must
+				use one type of report server instead of the other. 
+			 </div><div class="p">In general, the Crystal Reports 2011 Report
+				Application Server provides greater functionality over the Crystal Reports 2011
+				Processing Server, including such features as the ability to schedule reports,
+				receive alerts, and make runtime changes to reports. However, running reports
+				through the Crystal Reports 2011 Processing Server provides greater scalability
+				because once a report on the Crystal Reports 2011 Processing Server has been
+				viewed by one user, a copy of it is kept on the Crystal Reports Cache Server,
+				providing quick access to the same report by hundreds of other users. 
+			 </div><div class="p"><span class="ph">When to use a
+				  Crystal Reports 2011 Processing Server as your report server 
+				</span></div><div class="p">You should choose to access your Crystal
+				reports through a Crystal Reports 2011 Processing Server when any of these
+				conditions are true: 
+			 </div><ul class="ul"><a name="ul_BB0AB4EA8A81469597256940C4388299_9"/><li class="ul_li"><div><a name="li_7A8D4D63B2BE451ABFC6506E7946D7E4_9"/><div class="p">You are using the viewers within an SAP
+					 BusinessObjects Business Intelligence platform environment and do not have the Crystal Reports 2011
+					 Report Application Server running. 
+				  </div></div></li><li class="ul_li"><div><a name="li_FFFE595981B24B9394AF318C7B6EADBF_9"/><div class="p">You wish to take advantage of the Crystal
+					 Reports 2011 Processing Server's interaction with the Crystal Reports Cache
+					 Server, so that individual report pages are not generated every time they are
+					 requested. 
+				  </div></div></li><li class="ul_li"><div><a name="li_CE58405012E94E2987D0232F5B209636_9"/><div class="p">Your application delivers reports that do
+					 not need to be changed at run-time. 
+				  </div></div></li></ul><div class="p"><span class="ph">When to use a
+				  Crystal Reports 2011 Report Application Server as your report server 
+				</span></div><div class="p">You should choose to access your Crystal
+				reports through a Crystal Reports 2011 Report Application Server when any of
+				these conditions are true: 
+			 </div><ul class="ul"><a name="ul_7F9AA14DDAC742E5B7761BB0D96E44E4_9"/><li class="ul_li"><div><a name="li_B5DBD30584874DC28B937BB30B720378_9"/><div class="p">Your application needs to display reports
+					 that it has opened for modification on the Crystal Reports 2011 Report
+					 Application Server. 
+				  </div></div></li><li class="ul_li"><div><a name="li_3BF086C735C642FC9EFF8D47C32FD1F4_9"/><div class="p">Your application accesses Crystal report
+					 files (<span class="filepath">.rpt</span> files) directly from a file system. This
+					 functionality is only provided by an unmanaged Crystal Reports 2011 Report
+					 Application Server. 
+				  </div></div></li></ul><div class="p">A report source served by a Crystal Reports
+				2011 Report Application Server can be used to modify report elements
+				programatically, using the Report Application Server SDK. For example,
+				depending on a user’s preferences, your application can apply a template to an
+				existing report. 
+			 </div></div></div><script language="JavaScript">
+var prev="topic8.html";
+var next="topic10.html";
+
+		document.writeln ('<table align="left" border="0" cellspacing="0" cellpadding="10">');
+		document.writeln ('<tr>');		
+		document.write ('<td align="left">');	
+		if (prev != "" && prev != "tocframe.htm") {
+		   document.writeln ('<a href="' + prev + '">');
+		   document.writeln ('<img src="prevpage.gif" border="0" alt="Previous page"/></a>');
+		}		
+		if (next != "" && next != "idxframe.htm") {
+		   document.writeln ('<a href="' + next + '">');
+		   document.writeln ('<img src="nextpage.gif" border="0" alt="Next page"/></a>');   
+		}
+	    document.writeln ('<a href="default.htm#TOC" target="_top">');
+	    document.writeln ('<img src="showtoc.gif" border="0" alt="Click to show the Table of Contents"/></a></td>');
+	    document.writeln ('<a href="default.htm#IDX" target="_top">');
+	    document.writeln ('<img src="showix.gif" border="0" alt="Click to show the Index"/></a>');
+	    document.writeln ('<a href="default.htm#SEARCH" target="_top">');
+	    document.writeln ('<img src="search.gif" border="0" alt="Click to show the Search"/></a>');  
+		document.writeln ('</tr>');
+		document.writeln ('</table>');
+		</script>
+
+		</div></body></html>

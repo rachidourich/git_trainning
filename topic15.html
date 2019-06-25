@@ -1,0 +1,53 @@
+<!--File created from: BestPractices3.dita on 2011-10-11 (yyyy-mm-dd)
+                id of root element for this file: aurora_id_2006123150256d12e2-->
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"/><link rel="stylesheet" type="text/css" href="documentation.css"/><title> Cache the report source</title></head><body><div class="body">
+<div ID=Popup style="POSITION: absolute; Z-INDEX: 1"></div><script language="JavaScript" src="popup.js"></script><layer name="PopupLayer" visibility="hide" STYLE="position:absolute" z-index=1></layer>
+<a name="aurora_id_2006123150256d12e2_16"/><h2> Cache the report source</h2><a name="aurora_id_2006123150256d155e1_15idx30"/><a name="aurora_id_2006123150256d155e1_15idx32"/><div class="body"><div class="p">Caching a report source in the session variable
+		  allows it to be used multiple times efficiently. When a report source is not
+		  cached, the process of creating a new report source multiple times becomes
+		  fairly expensive. Furthermore, caching a report source allows reports with or
+		  without saved data to be refreshed. 
+		</div><div class="p">Once you have obtained an object (called 
+		  <span class="codeph">reportSource</span>) that
+		  represents a report source, you can cache the report source using the following
+		  code: 
+		</div><pre class="codeblock">session.setAttribute("reportSource", reportSource);
+</pre><br/><div class="noteblock"><span class="note"><span>Note</span>: </span>If you are using a cached report
+		  source, the viewer or the report source’s 
+		  <span class="apiname">dispose</span>
+		  methods should not be called until the report source is no longer being used. 
+		</div><div class="p">It is highly recommended that you cache report
+		  sources in order to ensure data consistency when viewing reports. Using an
+		  uncached report source causes a new report source to be created when any action
+		  is performed in the viewer or export control. As a result, using uncached
+		  report sources causes the viewer to display some pages with saved data and
+		  other pages with live data. 
+		</div></div><script language="JavaScript">
+var prev="topic14.html";
+var next="topic16.html";
+
+		document.writeln ('<table align="left" border="0" cellspacing="0" cellpadding="10">');
+		document.writeln ('<tr>');		
+		document.write ('<td align="left">');	
+		if (prev != "" && prev != "tocframe.htm") {
+		   document.writeln ('<a href="' + prev + '">');
+		   document.writeln ('<img src="prevpage.gif" border="0" alt="Previous page"/></a>');
+		}		
+		if (next != "" && next != "idxframe.htm") {
+		   document.writeln ('<a href="' + next + '">');
+		   document.writeln ('<img src="nextpage.gif" border="0" alt="Next page"/></a>');   
+		}
+	    document.writeln ('<a href="default.htm#TOC" target="_top">');
+	    document.writeln ('<img src="showtoc.gif" border="0" alt="Click to show the Table of Contents"/></a></td>');
+	    document.writeln ('<a href="default.htm#IDX" target="_top">');
+	    document.writeln ('<img src="showix.gif" border="0" alt="Click to show the Index"/></a>');
+	    document.writeln ('<a href="default.htm#SEARCH" target="_top">');
+	    document.writeln ('<img src="search.gif" border="0" alt="Click to show the Search"/></a>');  
+		document.writeln ('</tr>');
+		document.writeln ('</table>');
+		</script>
+
+		</div></body></html>

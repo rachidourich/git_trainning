@@ -1,0 +1,56 @@
+<!--File created from: BestPractices4.dita on 2011-10-11 (yyyy-mm-dd)
+                id of root element for this file: aurora_id_2006123150256d13e28-->
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"/><link rel="stylesheet" type="text/css" href="documentation.css"/><title>Setting the 
+		setOwnPage
+		property</title></head><body><div class="body">
+<div ID=Popup style="POSITION: absolute; Z-INDEX: 1"></div><script language="JavaScript" src="popup.js"></script><layer name="PopupLayer" visibility="hide" STYLE="position:absolute" z-index=1></layer>
+<a name="aurora_id_2006123150256d13e28_18"/><h2>Setting the 
+		<span class="codeph">setOwnPage</span>
+		property</h2><div class="body"><div class="p">The viewer is capable of generating complete HTML
+		  pages and can set the appropriate page properties depending on the viewing
+		  context. Setting the 
+		  <span class="codeph">setOwnPage</span> property to
+		  true provides several benefits, by allowing the viewer to completely handle the
+		  surrounding HTML content. Allowing the viewer to handle the surrounding HTML
+		  content reduces the amount of code you need to add to your JSP page and allows
+		  the viewer to automatically determine certain settings: 
+		</div><ul class="ul"><a name="ul_A55E8B6A5BAE4CC9874B6B404D490CAB_17"/><li class="ul_li"><div><a name="li_C11AC8FED2C840258055AA68872B24D1_17"/><div class="p">It allows the viewer to choose which page start
+				and end tags to use based on what device is being used to view the page. 
+			 </div><div class="p">For example, it will write out the &lt;html&gt;
+				start tag for web browsers and &lt;wml&gt; start tag for mobile devices. 
+			 </div></div></li><li class="ul_li"><div><a name="li_11B85B432329414A8426087C5DC7D270_17"/><div class="p">It correctly sets the content-type and charset
+				information for the page. This ensures that pages containing international
+				characters will be displayed correctly. 
+			 </div></div></li></ul><br/><div class="noteblock"><span class="note"><span>Note</span>: </span>If 
+		  <span class="codeph">setOwnPage</span> is false,
+		  the surrounding HTML (or WML) tags and content-type and charset directives need
+		  to be manually set. 
+		</div></div><script language="JavaScript">
+var prev="topic16.html";
+var next="topic18.html";
+
+		document.writeln ('<table align="left" border="0" cellspacing="0" cellpadding="10">');
+		document.writeln ('<tr>');		
+		document.write ('<td align="left">');	
+		if (prev != "" && prev != "tocframe.htm") {
+		   document.writeln ('<a href="' + prev + '">');
+		   document.writeln ('<img src="prevpage.gif" border="0" alt="Previous page"/></a>');
+		}		
+		if (next != "" && next != "idxframe.htm") {
+		   document.writeln ('<a href="' + next + '">');
+		   document.writeln ('<img src="nextpage.gif" border="0" alt="Next page"/></a>');   
+		}
+	    document.writeln ('<a href="default.htm#TOC" target="_top">');
+	    document.writeln ('<img src="showtoc.gif" border="0" alt="Click to show the Table of Contents"/></a></td>');
+	    document.writeln ('<a href="default.htm#IDX" target="_top">');
+	    document.writeln ('<img src="showix.gif" border="0" alt="Click to show the Index"/></a>');
+	    document.writeln ('<a href="default.htm#SEARCH" target="_top">');
+	    document.writeln ('<img src="search.gif" border="0" alt="Click to show the Search"/></a>');  
+		document.writeln ('</tr>');
+		document.writeln ('</table>');
+		</script>
+
+		</div></body></html>

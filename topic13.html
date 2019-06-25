@@ -1,0 +1,115 @@
+<!--File created from: ViewersFunctionality9.dita on 2011-10-11 (yyyy-mm-dd)
+                id of root element for this file: concept_AB89DE7616B4449AB85675D1E23C5BCC-->
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"/><link rel="stylesheet" type="text/css" href="documentation.css"/><title>Special viewer features </title></head><body><div class="body">
+<div ID=Popup style="POSITION: absolute; Z-INDEX: 1"></div><script language="JavaScript" src="popup.js"></script><layer name="PopupLayer" visibility="hide" STYLE="position:absolute" z-index=1></layer>
+<a name="concept_AB89DE7616B4449AB85675D1E23C5BCC_14"/><h2>Special viewer features </h2><a name="aurora_id_2006123150256d155e1_13idx23"/><a name="aurora_id_2006123150256d155e1_13idx24"/><a name="aurora_id_2006123150256d155e1_13idx25"/><a name="aurora_id_2006123150256d155e1_13idx26"/><a name="aurora_id_2006123150256d155e1_13idx27"/><a name="aurora_id_2006123150256d155e1_13idx28"/><div class="body"><div class="p">The viewers provide several special viewing
+		  capabilities including Locale-specific viewing, Embedded maps, Smart Tag
+		  parsing, and a tool panel that displays the group tree and the parameter panel.
+		  
+		</div><div class="section"><a name="section_AD941B8493654FE29E4C03B14FD15331_13"/><div class="section_title">Locale-specific viewing </div><div class="p">To use this SDK to display reports in other
+			 languages when using a web browser, the international fonts must be installed
+			 on these machines: 
+		  </div><ul class="ul"><a name="ul_23DFFF070BE24DE185908153610B7991_13"/><li class="ul_li"><div><a name="li_B282CD42E7B84AC9A0C7BDE5995D2A1B_13"/>The
+				Crystal Reports 2011 Report Application Server or Crystal Reports 2011
+				Processing Server. 
+			 </div></li><li class="ul_li"><div><a name="li_F46F8FAC1C98428AAB830A21988A6DF8_13"/>The
+				Java application server. 
+			 </div></li><li class="ul_li"><div><a name="li_E6EDE1E71AC544B380A9DC648BE6BA53_13"/>The
+				machine running the web browser. 
+			 </div></li></ul><div class="p">Although some report contents (such as the
+			 currency symbol and DateTime format) also rely on a locale setting, this
+			 setting does not need to be the same as the locale setting on the Crystal
+			 Reports 2011 Report Application Server or the Crystal Reports 2011 Processing
+			 Server. 
+		  </div><br/><div class="noteblock"><span class="note"><span>Note</span>: </span>The currency symbol is
+			 determined by the locale setting on the server (not the user’s browser) to
+			 ensure that different users see the same currency figures. 
+		  </div><br/><div class="noteblock"><span class="note"><span>Tip</span>: </span>It is possible for the default
+			 language setting of the web browser to be different from the system regional
+			 setting. For example, the system regional setting may be Chinese, but if the
+			 browser default language setting is English, the viewer is displayed in
+			 English. To set the system regional setting or the web browser’s language
+			 setting, consult the documentation for your operating system or web browser. 
+		  </div></div><div class="section"><a name="section_058F3A9E5B48420E9060A156FD75C3DE_13"/><div class="section_title">Embedded maps </div><div class="p">The ability to view, and drill down on, embedded
+			 maps is offered by several of the viewers. This feature requires the mapping
+			 DLLs to be installed on the Crystal Reports 2011 Report Application Server or
+			 Crystal Reports 2011 Processing Server. 
+		  </div></div><div class="section"><a name="section_2A64D59F31584FB89068303C51DC3842_13"/><div class="section_title">Smart Tag parsing </div><div class="p">Crystal Reports lets users take advantage of the
+			 Smart Tags feature of Microsoft Office XP. With Smart Tags, users can copy a
+			 chart, text object, or field object from Crystal Reports and then paste the
+			 object as a Smart Tag into an Office XP application. 
+		  </div><br/><div class="noteblock"><span class="note"><span>Note</span>: </span>The Smart Tag feature in
+			 Crystal Reports supports Word XP, Excel XP and Outlook XP. For Outlook XP
+			 support, Word XP must be set as the message editor. 
+		  </div><div class="p">The JSP page that is the target of a Smart Tag
+			 contains code that uses the CrystalReportSmartTagInfoParser Object. When a user
+			 clicks on the View the Report item in the Smart Tag Action menu, the Smart Tag
+			 passes information to the JSP page on the server. The
+			 CrystalReportSmartTagInfoParser Object then parses the information sent by the
+			 Smart Tag and the appropriate logon and report information can then be used to
+			 generate the report from within a web browser. 
+		  </div></div><div class="section"><a name="section_52A8417F386C446EAAFFCF7000814825_13"/><div class="section_title">Tool panel </div><div class="p">The tool panel appears on the left side of the
+			 viewer and can display the group tree or the parameter panel. You can hide the
+			 tool panel from the user programmatically. 
+		  </div><div class="section_title">Group tree </div><div class="p">The group tree displays the headings for each
+			 group in the report in a hierarchy. Lists of nested group headings can be
+			 expanded or collapsed. 
+		  </div><div class="p">When the user clicks on a drilldown group, the
+			 drilldown view of the report on the selected group opens. When the user clicks
+			 on a group heading that does not represent a drilldown group, the viewer jumps
+			 to the page of the report where the selected group data is displayed. 
+		  </div><div class="p">The group tree view is specified with the 
+			 <span class="codeph">CrToolPanelViewTypeEnum.groupTree</span>
+			 enumeration. 
+		  </div><div class="section_title">Parameter panel</div><div class="p">The parameter panel allows users to set static
+			 and dynamic parameters and to refresh the report. The parameter panel enables
+			 users to interactively format and filter report data. The panel displays all
+			 parameters that have been set to 
+			 <span class="uicontrol">Editable</span> or
+			 
+			 <span class="uicontrol">Read only</span>.
+			 If a parameter is set to 
+			 <span class="uicontrol">Editable</span>,
+			 you can add, delete, or modify parameter values directly in the text box on the
+			 parameter panel. 
+			 <br/><div class="noteblock"><span class="note"><span>Note</span>: </span>Advanced parameters include parameters
+				that accept multiple or range values, parameters with a dynamic list of values,
+				parameters that depend on other parameters, parameters with a large static list
+				of values, and editmasks. 
+			 </div></div><div class="p">When you modify the value of a data parameter,
+			 the report refreshes and accesses the database to make the corresponding
+			 changes. When you modify the value of a non-data parameter, the report is
+			 formatted or filtered based on saved data within the report. The report does
+			 not access the database. 
+		  </div><div class="p">The parameter panel view is specified with the 
+			 <span class="codeph">CrToolPanelViewTypeEnum.parameterPanel</span>
+			 enumeration. 
+		  </div></div></div><div class="related-links__title">Related Topics:</div><ul class="ul"><li class="ul_li"><div class="child_topic_link_content"><a class="child_topic_link_href" href="topic11.html#aurora_id_2006123150256d148e2_11">Viewer features</a></div></li><li class="ul_li"><div class="child_topic_link_content"><a class="child_topic_link_href" href="topic53.html#concept_E148DCBDC3E44E51BE26DE193ADF33D4_55">Customizing the DHTML viewer tool panel</a></div></li></ul><script language="JavaScript">
+var prev="topic12.html";
+var next="topic14.html";
+
+		document.writeln ('<table align="left" border="0" cellspacing="0" cellpadding="10">');
+		document.writeln ('<tr>');		
+		document.write ('<td align="left">');	
+		if (prev != "" && prev != "tocframe.htm") {
+		   document.writeln ('<a href="' + prev + '">');
+		   document.writeln ('<img src="prevpage.gif" border="0" alt="Previous page"/></a>');
+		}		
+		if (next != "" && next != "idxframe.htm") {
+		   document.writeln ('<a href="' + next + '">');
+		   document.writeln ('<img src="nextpage.gif" border="0" alt="Next page"/></a>');   
+		}
+	    document.writeln ('<a href="default.htm#TOC" target="_top">');
+	    document.writeln ('<img src="showtoc.gif" border="0" alt="Click to show the Table of Contents"/></a></td>');
+	    document.writeln ('<a href="default.htm#IDX" target="_top">');
+	    document.writeln ('<img src="showix.gif" border="0" alt="Click to show the Index"/></a>');
+	    document.writeln ('<a href="default.htm#SEARCH" target="_top">');
+	    document.writeln ('<img src="search.gif" border="0" alt="Click to show the Search"/></a>');  
+		document.writeln ('</tr>');
+		document.writeln ('</table>');
+		</script>
+
+		</div></body></html>

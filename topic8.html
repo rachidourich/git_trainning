@@ -1,0 +1,102 @@
+<!--File created from: ../shared/ViewersArchitecture2.dita on 2011-10-11 (yyyy-mm-dd)
+                id of root element for this file: aurora_topic_88926B55418F41EE98A8B3C461E413C8-->
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"/><link rel="stylesheet" type="text/css" href="documentation.css"/><title>Java viewers SDK</title></head><body><div class="body">
+<div ID=Popup style="POSITION: absolute; Z-INDEX: 1"></div><script language="JavaScript" src="popup.js"></script><layer name="PopupLayer" visibility="hide" STYLE="position:absolute" z-index=1></layer>
+<a name="aurora_topic_88926B55418F41EE98A8B3C461E413C8_9"/><h2>Java viewers SDK</h2><a name="aurora_id_2006123150256d155e1_8idx9"/><a name="aurora_id_2006123150256d155e1_8idx10"/><a name="aurora_id_2006123150256d155e1_8idx13"/><div class="body"><div class="p">The Viewers SDK is an API for deploying report
+		viewers. This API also lets you incorporate report exporting to a range of
+		different formats in your web application. 
+	 </div><div class="section"><a name="section_144A5E4AD75F4A169AC70DF370C36277_8"/><div class="section_title">Java viewers</div><div class="p">The Java viewers (viewers) are used primarily for
+		  generating Dynamic HTML (DHTML) pages that display Crystal reports. The viewers
+		  are a 'thin-client' technology - users of your web application don't need to
+		  install any additional software in order to view the reports. 
+		</div><div class="p">There are two Java viewers available to you: 
+		<dl><dt class="dlterm">DHTML report page viewer 
+			 </dt><dd>This viewer provides basic thin-client report
+				viewing capabilities to present data and allow drill down, page navigation,
+				zoom, prompting, text search, highlighting, exporting, and printing. 
+			 </dd><dt class="dlterm">report parts viewer 
+			 </dt><dd>This viewer provides the ability to view
+				individual report parts including charts, text, and fields. 
+			 </dd></dl></div></div><div class="section"><a name="section_31B92BDC4E2B4EB89F70B5AF33A94638_8"/><div class="section_title">JSF version of the DHTML report page
+		  viewer</div><div class="p">The DHTML Viewer is the primary report viewer that
+		  is used to view report files using RAS as the report server. 
+		</div><div class="p">The JSF version of the DHTML report page viewer is
+		  implemented by the 
+		  <span class="apiname">ReportPageViewer</span> component. The
+		  
+		  <span class="apiname">ReportPageViewer</span> component has
+		  functionality similar to the DHTML report page viewer, including a toolbar that
+		  allows a user to navigate, search, and export the report to other formats. 
+		</div><div class="p">The 
+		  <span class="apiname">ReportPageViewer</span> component
+		  renders the report in DHTML and provides a toolbar that enables the user to
+		  navigate the report. You can customize the appearance and behavior of the 
+		  <span class="apiname">ReportPageViewer</span> component by
+		  setting its attributes. 
+		</div><div class="p">To display a report using the 
+		  <span class="apiname">ReportPageViewer</span> component, you
+		  must specify a report source. A report source is an object used by the 
+		  <span class="apiname">ReportPageViewer</span> component to
+		  access the properties of a report. It provides the 
+		  <span class="apiname">ReportPageViewer</span> component with
+		  the means to query for report data, page information, and other internal report
+		  information. 
+		</div><div class="p">You can customize the appearance of the 
+		  <span class="apiname">ReportPageViewer</span> component by
+		  setting various attributes. Some commonly used attributes include the
+		  following: 
+		<ul class="ul"><a name="ul_463B14C2462A469B8A64B0E68A6D7CDE_8"/><li class="ul_li"><div><div class="p"><span class="codeph">toolPanelViewType</span>
+				attribute 
+			 </div><div class="p">The tool panel appears on the left side of the 
+				<span class="apiname">ReportPageViewer</span> component and
+				can display the group tree or the parameter panel. The group tree is displayed
+				by default. You can set the 
+				<span class="apiname">ReportPageViewer</span> component to
+				display the parameter panel or to hide the tool panel by setting the 
+				<span class="codeph">toolPanelViewType</span>
+				attribute to 
+				<span class="codeph">ParameterPanel</span> or 
+				<span class="codeph">None</span>,
+				respectively. 
+			 </div></div></li><li class="ul_li"><div><a name="li_57B7EA2AC71F4BCDA810872A423DB72A_8"/><div class="p"><span class="codeph">displayToolbar</span>
+				attribute 
+			 </div><div class="p">The Toolbar is the main method of report
+				navigation. It includes buttons to export, search, and page through the report.
+				By default, the 
+				<span class="apiname">ReportPageViewer</span> component
+				displays the Toolbar. You can disable rendering of the Toolbar or specific
+				components of the Toolbar, by setting the 
+				<span class="codeph">displayToolbar</span>
+				attribute or related attributes to false. For example, to display the Toolbar
+				but disable exporting, set the 
+				<span class="codeph">displayToolbarExportButton</span> to 
+				<span class="codeph">false</span>. 
+			 </div></div></li></ul></div></div></div><script language="JavaScript">
+var prev="topic7.html";
+var next="topic9.html";
+
+		document.writeln ('<table align="left" border="0" cellspacing="0" cellpadding="10">');
+		document.writeln ('<tr>');		
+		document.write ('<td align="left">');	
+		if (prev != "" && prev != "tocframe.htm") {
+		   document.writeln ('<a href="' + prev + '">');
+		   document.writeln ('<img src="prevpage.gif" border="0" alt="Previous page"/></a>');
+		}		
+		if (next != "" && next != "idxframe.htm") {
+		   document.writeln ('<a href="' + next + '">');
+		   document.writeln ('<img src="nextpage.gif" border="0" alt="Next page"/></a>');   
+		}
+	    document.writeln ('<a href="default.htm#TOC" target="_top">');
+	    document.writeln ('<img src="showtoc.gif" border="0" alt="Click to show the Table of Contents"/></a></td>');
+	    document.writeln ('<a href="default.htm#IDX" target="_top">');
+	    document.writeln ('<img src="showix.gif" border="0" alt="Click to show the Index"/></a>');
+	    document.writeln ('<a href="default.htm#SEARCH" target="_top">');
+	    document.writeln ('<img src="search.gif" border="0" alt="Click to show the Search"/></a>');  
+		document.writeln ('</tr>');
+		document.writeln ('</table>');
+		</script>
+
+		</div></body></html>
